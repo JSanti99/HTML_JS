@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejemplo DOS</title>
+    <script type="text/javascript" src="scripts.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!--link rel="stylesheet" type="text/css" href="styles.css"!-->
+  </head>
+  <body>
+      <div class="container">
+          <div id=container class="row">
+              <div class="col-sm">
+                  <div id="read-input">
+                    <h3>Entrada de Datos</h3>
+                    <label for="nOne">Numero Uno</label>
+                    <input type="text" id="nOne"><br>
+                    <label for="nTwo">Numero Dos</label>
+                    <input type="text" id="nTwo">
+                  </div>
+              </div>
+              <div class="col-sm" style="color: #FFC300">
+                  <div id="options">
+                    <h3>Opciones</h3>
+                    <select id="option" onchange="menu()">
+                    <option>Sumar</option>
+                    <option>Restar</option>
+                    <option>Multiplicar</option>
+                    <option>Dividir</option>
+                    <option>Primos</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="col-sm">
+                  <div id="result">
+                    &nbsp;
+                  </div>
+              </div>
+            </div>
+      </div>
+    
+  </body>
+</html>
