@@ -52,8 +52,40 @@ function isCousing(n){
     var cont=2;
     var cousing=true;
     while (cont<=n/2 && cousing){
-        cousing=!(n% cont==0);
+        cousing=!(n%cont==0);
     }
     return cousing;
 }
-function getHead()
+function getHead(x,y){
+    var t=document.createElement("table");
+    t.setAttribute("id","customers");
+    var row=document.createElement("tr");
+    var col=document.createElement("th");
+    col.setAttribute("colspan","2");
+    var my= x>y? x:y;
+    var mn= x<y? x:y;
+    var t="Numeros Primos de " + mn + "hasta " + my;
+    col.appendChild(document.createTextNode(t));
+    row.appendChild(col);
+    t.appendChild(row);
+    return t;
+}
+function cosuins(c, one, two){
+    var tb=getHead(one,two);
+    c.innerHTML; 
+    c.appendChild(tb);
+    var my= one > two ? one:two;
+    var mn= one < two ? one:two;
+    var cont=1;
+    for (var i=mn ;i<= my;i++){
+        var row= document.createElement("tr");
+        var col= document.createElement("td");
+        col.appendChild(document.createTextNode(cont++));
+        row.appendChild(col);
+        tb.appendChild(row);
+        col.appendChild(document.createElement("td"));
+        col.appendChild(i);
+        row.appendChild(col);
+        tb.appendChild(row);
+    }
+}
